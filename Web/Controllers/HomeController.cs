@@ -40,6 +40,11 @@ namespace War_chest.Controllers
         {
             return HandleExceptions(() => 
             {
+                var dbUser = DB.Users.Find(model.UserName);
+
+                if (dbUser.UserName == model.UserName)
+                    ;
+
                 return View("Index");
             });
         }
