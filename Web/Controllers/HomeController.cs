@@ -1,12 +1,16 @@
 ﻿using System;
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
 using War_chest.Models;
 
 namespace War_chest.Controllers
 {
     public class HomeController : BaseController
     {
+        public HomeController(IConfiguration _config) : base(_config)
+        { }
+
         public ActionResult Index()
         {
             return HandleExceptions(() =>

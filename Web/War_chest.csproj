@@ -1,10 +1,7 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
-
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
   <PropertyGroup>
     <TargetFramework>netcoreapp3.0</TargetFramework>
   </PropertyGroup>
-
-
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.0.0-preview5-19227-01" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.0.0-preview6.19304.10" />
@@ -14,6 +11,11 @@
     </PackageReference>
     <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="3.0.0-preview6.19304.6" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.0.0-preview6-19319-03" />
+    <PackageReference Include="MySql.Data" Version="8.0.17" />
   </ItemGroup>
-
+  <ItemGroup>
+    <Reference Include="Database">
+      <HintPath>..\Database\bin\Debug\netcoreapp3.0\Database.dll</HintPath>
+    </Reference>
+  </ItemGroup>
 </Project>
